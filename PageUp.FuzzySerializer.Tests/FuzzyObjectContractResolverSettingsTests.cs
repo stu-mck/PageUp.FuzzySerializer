@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using PageUp.FuzzySerializer;
 
 namespace PageUp.FuzzySerializer.Tests
 {

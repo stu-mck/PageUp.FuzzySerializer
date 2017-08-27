@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Xunit;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using PageUp.Fuzzy;
+using PageUp.FuzzySerializer;
 
 namespace PageUp.FuzzySerializer.Tests
 {
