@@ -1,0 +1,24 @@
+# Get me ubunty 14.04 trusty
+sudo: required
+dist: trusty
+group: edge
+
+before_install:
+  # set up dotnet
+  - sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
+  - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
+  - sudo apt-get update
+  - sudo apt-get install -y dotnet-dev-1.0.4
+  
+  # set up aws cli
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
+
+# these get run inside on the travis agent after its finished installing docker
+script:
+  - ./test.sh
+  - ls -R | awk '/:$/&&f{s=$0;f=0}/:$/&&!f{sub(/:$/,"");s=$0;f=1;next}NF&&f{ print s"/"$0 }'
+
+branches:
+  only:
+  - master

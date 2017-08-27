@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageUp.Fuzzy", "PageUp.FuzzySerializer\PageUp.Fuzzy.csproj", "{B7335998-A7D3-480C-98D3-A4A09FE9A055}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageUp.FuzzySerializer", "PageUp.FuzzySerializer\PageUp.FuzzySerializer.csproj", "{B7335998-A7D3-480C-98D3-A4A09FE9A055}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageUp.FuzzySerializer.Tests", "PageUp.FuzzySerializer.Tests\PageUp.FuzzySerializer.Tests.csproj", "{E6DB32A2-9CA2-40C6-AB2A-CE9C9915A000}"
 EndProject
