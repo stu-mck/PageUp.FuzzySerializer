@@ -1,7 +1,7 @@
 using System;
 using Newtonsoft.Json.Serialization;
 
-namespace PageUp.Fuzzy {
+namespace PageUp.FuzzySerializer {
     public class RandomGuidValueProvider : IValueProvider
     {
         public void SetValue(object target, object value)
