@@ -9,10 +9,6 @@ before_install:
   - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
   - sudo apt-get update
   - sudo apt-get install -y dotnet-dev-1.0.4
-  
-  # set up aws cli
-  - pip install --user awscli
-  - export PATH=$PATH:$HOME/.local/bin
 
 # these get run inside on the travis agent after its finished installing docker
 script:

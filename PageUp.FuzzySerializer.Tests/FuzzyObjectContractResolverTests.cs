@@ -104,7 +104,7 @@ namespace PageUp.FuzzySerializer.Tests
         }
 
         [Fact]
-        public void AddPropertyInRandomPositionIsOff_Serialize_NewPropertyAtTheLastPositionEverySerialize()
+        public void AddPropertyInRandomPositionIsOff_Serialize_NewPropertyItTheLastPositionEverySerialize()
         {
             var jsonSerializeSettings = new JsonSerializerSettings { 
                     ContractResolver = new FuzzyObjectContractResolver(new FuzzyObjectContractResolverSettings { AddPropertyInRandomPosition = false })
@@ -112,17 +112,13 @@ namespace PageUp.FuzzySerializer.Tests
 
             List<bool> lastPositionInSerialise = new List<bool>();
 
-            for (int i = 0; i<3; i++) {
-                var serialisedObject = JsonConvert.SerializeObject(
-                    _person, Formatting.None, jsonSerializeSettings);
+            var serialisedObject = JsonConvert.SerializeObject(
+                _person, Formatting.None, jsonSerializeSettings);
 
-                var deserialisedObj = (JObject)JsonConvert.DeserializeObject(serialisedObject);
+            var deserialisedObj = (JObject)JsonConvert.DeserializeObject(serialisedObject);
 
-                var index = FindIndexOfNewPropertyKey(deserialisedObj);
-                lastPositionInSerialise.Add(index + 1 == deserialisedObj.Count);
-            }
-
-            Assert.Contains(true, lastPositionInSerialise);
+            var index = FindIndexOfNewPropertyKey(deserialisedObj);
+            Assert.Equal(index + 1, deserialisedObj.Count);
         }
 
         [Fact]
