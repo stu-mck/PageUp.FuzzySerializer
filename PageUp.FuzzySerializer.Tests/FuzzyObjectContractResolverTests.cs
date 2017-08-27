@@ -79,7 +79,7 @@ namespace PageUp.FuzzySerializer.Tests
         public void AddPropertyInRandomPositionIsOn_Serialize_NewPropertyIsInDifferentPositionEverySerialize()
         {
             var jsonSerializeSettings = new JsonSerializerSettings { 
-                    ContractResolver = new FuzzyObjectContractResolver(new FuzzyObjectContractResolverSettings { AddPropertyInRandomPosition = true })
+                    ContractResolver = new FuzzyObjectContractResolver(new FuzzyObjectContractResolverSettings { AddRandomPropertyToObjects = true, AddPropertyInRandomPosition = true, ShuffleResponse = false })
                 };
 
             List<bool> differentPositionInSerialise = new List<bool>();
@@ -107,7 +107,7 @@ namespace PageUp.FuzzySerializer.Tests
         public void AddPropertyInRandomPositionIsOff_Serialize_NewPropertyItTheLastPositionEverySerialize()
         {
             var jsonSerializeSettings = new JsonSerializerSettings { 
-                    ContractResolver = new FuzzyObjectContractResolver(new FuzzyObjectContractResolverSettings { AddPropertyInRandomPosition = false })
+                    ContractResolver = new FuzzyObjectContractResolver(new FuzzyObjectContractResolverSettings { AddRandomPropertyToObjects = true, ShuffleResponse = false, AddPropertyInRandomPosition = false })
                 };
 
             List<bool> lastPositionInSerialise = new List<bool>();
