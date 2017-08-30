@@ -6,7 +6,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PageUp.FuzzySerializer", "P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PageUp.FuzzySerializer.Tests", "PageUp.FuzzySerializer.Tests\PageUp.FuzzySerializer.Tests.csproj", "{E6DB32A2-9CA2-40C6-AB2A-CE9C9915A000}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PageUp.FuzzySerializer.Extension", "PageUp.FuzzySerializer.Extension\PageUp.FuzzySerializer.Extension.csproj", "{5E0F1D62-B535-4655-8873-7A95A43CB037}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PageUp.FuzzySerializer.NetCoreMvc", "PageUp.FuzzySerializer.NetCoreMvc\PageUp.FuzzySerializer.NetCoreMvc.csproj", "{5E0F1D62-B535-4655-8873-7A95A43CB037}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageUp.FuzzySerializer.Net", "PageUp.FuzzySerializer.Net\PageUp.FuzzySerializer.Net.csproj", "{5E391965-FA65-4EE2-9019-9C1F1802FA4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

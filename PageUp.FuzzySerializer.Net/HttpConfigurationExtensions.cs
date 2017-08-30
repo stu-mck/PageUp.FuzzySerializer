@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace PageUp.FuzzySerializer.NetFrameworkExtension
+namespace PageUp.FuzzySerializer.Net
 {
     public static class HttpConfigurationExtensions
     {

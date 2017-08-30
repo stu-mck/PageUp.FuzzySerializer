@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PageUp.FuzzySerializer.NetFrameworkExtension")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("PageUp.FuzzySerializer.Net")]
+[assembly: AssemblyDescription("FuzzySerializer integration to .Net Framework")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PageUp.FuzzySerializer.NetFrameworkExtension")]
+[assembly: AssemblyCompany("PageUp")]
+[assembly: AssemblyProduct("PageUp.FuzzySerializer.Net")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

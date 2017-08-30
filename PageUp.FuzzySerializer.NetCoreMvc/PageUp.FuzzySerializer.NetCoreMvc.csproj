@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <PackageId>PageUp.FuzzySerializer.NetCoreMvc</PackageId>
+    <Authors>Abhaya Chauhan</Authors>
+    <Company>PageUp</Company>
+    <Product>FuzzySerializer.NetCoreMvc.Extension</Product>
+    <Description>Integrates FuzzySerializer into .Net Core MVC</Description>
+    <PackageTags>PageUp Fuzzy Serializer MvcBuilder MVC Core</PackageTags>
+    <AssemblyName>PageUp.FuzzySerializer.NetCoreMvc</AssemblyName>
+    <RootNamespace>PageUp.FuzzySerializer.NetCoreMvc</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PageUp.FuzzySerializer\PageUp.FuzzySerializer.csproj" />
+  </ItemGroup>
+</Project>

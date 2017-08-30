@@ -1,6 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
+    <Version>1.0.0</Version>
+    <Company>PageUp</Company>
+    <Authors>Abhaya Chauhan</Authors>
+    <Product>PageUp FuzzySerializer</Product>
+    <Description>Fuzzy Serializer is a contract resolver for Newtonsoft, which enables the serializer to ensure clients deserializing the message, will respect Postels Law ("be liberal in what you accept from others").</Description>
+    <PackageTags>Fuzzy Newtonsoft Json Serializer PageUp Postel</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />

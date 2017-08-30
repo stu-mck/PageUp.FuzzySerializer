@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>PageUp.FuzzySerializer.Net</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Abhaya Chauhan</authors>
+    <owners>PageUp</owners>
+    <description>$description$</description>
+    <tag>Newtonsoft Json Serialise Mvc Fuzzy Middleware PageUp</tag>
+  </metadata>
+</package>

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace PageUp.FuzzySerializer.Extension 
+namespace PageUp.FuzzySerializer.NetCoreMvc
 {
     public static class IMvcBuilderExtensions {
 
