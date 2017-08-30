@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PageUp.FuzzySerializer.NetC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageUp.FuzzySerializer.Net", "PageUp.FuzzySerializer.Net\PageUp.FuzzySerializer.Net.csproj", "{5E391965-FA65-4EE2-9019-9C1F1802FA4A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PageUp.FuzzySerializer.Legacy", "PageUp.FuzzySerializer.Legacy\PageUp.FuzzySerializer.Legacy.csproj", "{1A814AFB-62C2-40D7-9446-E52D4AB4822A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,18 @@ Global
 		{5E391965-FA65-4EE2-9019-9C1F1802FA4A}.Release|x64.Build.0 = Release|Any CPU
 		{5E391965-FA65-4EE2-9019-9C1F1802FA4A}.Release|x86.ActiveCfg = Release|Any CPU
 		{5E391965-FA65-4EE2-9019-9C1F1802FA4A}.Release|x86.Build.0 = Release|Any CPU
+		{1A814AFB-62C2-40D7-9446-E52D4AB4822A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A814AFB-62C2-40D7-9446-E52D4AB4822A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A814AFB-62C2-40D7-9446-E52D4AB4822A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1A814AFB-62C2-40D7-9446-E52D4AB4822A}.Debug|x64.Build.0 = Debug|Any CPU
+		{1A814AFB-62C2-40D7-9446-E52D4AB4822A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1A814AFB-62C2-40D7-9446-E52D4AB4822A}.Debug|x86.Build.0 = Debug|Any CPU
+		{1A814AFB-62C2-40D7-9446-E52D4AB4822A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A814AFB-62C2-40D7-9446-E52D4AB4822A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A814AFB-62C2-40D7-9446-E52D4AB4822A}.Release|x64.ActiveCfg = Release|Any CPU
+		{1A814AFB-62C2-40D7-9446-E52D4AB4822A}.Release|x64.Build.0 = Release|Any CPU
+		{1A814AFB-62C2-40D7-9446-E52D4AB4822A}.Release|x86.ActiveCfg = Release|Any CPU
+		{1A814AFB-62C2-40D7-9446-E52D4AB4822A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
