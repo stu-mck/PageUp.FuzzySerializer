@@ -23,5 +23,12 @@ namespace PageUp.FuzzySerializer.Tests
             var settings = new FuzzyObjectContractResolverSettings();
             Assert.Equal(true, settings.AddPropertyInRandomPosition);
         }
+
+        [Fact]
+        public void DefaultSettings_Initiated_UseCamelCaseNamingStrategyIsOff()
+        {
+            var settings = new FuzzyObjectContractResolverSettings();
+            Assert.Equal(false, settings.UseCamelCaseNamingStrategy);
+        }
     }
 }

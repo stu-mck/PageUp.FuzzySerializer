@@ -175,6 +175,42 @@ namespace PageUp.FuzzySerializer.Tests
             }
         }
 
+        [Fact]
+        public void UseCamelCaseNamingStrategyIsOn_Serialize_AllPropertyNamesFollowCamelCaseNamingStrategy()
+        {
+            var jsonSerializeSettings = new JsonSerializerSettings
+            {
+                ContractResolver = new FuzzyObjectContractResolver(new FuzzyObjectContractResolverSettings { UseCamelCaseNamingStrategy = true, AddRandomPropertyToObjects = false })
+            };
+
+            var serialisedObject = JsonConvert.SerializeObject(
+                _person, Formatting.None, jsonSerializeSettings);
+
+            var deserialisedObj = (JObject)JsonConvert.DeserializeObject(serialisedObject);
+            
+            Assert.Equal(2, deserialisedObj.Count);
+            Assert.Equal("Abhaya Chauhan", deserialisedObj["name"]);
+            Assert.Equal("21", deserialisedObj["age"]);
+        }
+
+        [Fact]
+        public void UseCamelCaseNamingStrategyIsOff_Serialize_AllPropertyNamesRemainUnchanged()
+        {
+            var jsonSerializeSettings = new JsonSerializerSettings
+            {
+                ContractResolver = new FuzzyObjectContractResolver(new FuzzyObjectContractResolverSettings { UseCamelCaseNamingStrategy = false, AddRandomPropertyToObjects = false })
+            };
+
+            var serialisedObject = JsonConvert.SerializeObject(
+                _person, Formatting.None, jsonSerializeSettings);
+
+            var deserialisedObj = (JObject)JsonConvert.DeserializeObject(serialisedObject);
+
+            Assert.Equal(2, deserialisedObj.Count);
+            Assert.Equal("Abhaya Chauhan", deserialisedObj["Name"]);
+            Assert.Equal("21", deserialisedObj["Age"]);
+        }
+
         private int FindIndexOfPropertyKey(JObject deserialisedPerson, string propertyName) {
             int index = 0;
             foreach (var keyValuePair in deserialisedPerson) 

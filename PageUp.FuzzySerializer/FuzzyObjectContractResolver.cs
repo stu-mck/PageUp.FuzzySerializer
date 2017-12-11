@@ -16,6 +16,15 @@ namespace PageUp.FuzzySerializer {
         public FuzzyObjectContractResolver(FuzzyObjectContractResolverSettings settings)
         {
             _settings = settings;
+
+            if (settings.UseCamelCaseNamingStrategy)
+            {
+                NamingStrategy = new CamelCaseNamingStrategy
+                {
+                    ProcessDictionaryKeys = true,
+                    OverrideSpecifiedNames = true
+                };
+            }
         }
 
         public override JsonContract ResolveContract(Type type) {

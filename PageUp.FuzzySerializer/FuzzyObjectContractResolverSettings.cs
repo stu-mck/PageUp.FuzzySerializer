@@ -4,5 +4,6 @@ namespace PageUp.FuzzySerializer {
         public bool ShuffleResponse = true;
         public bool AddRandomPropertyToObjects = true;
         public bool AddPropertyInRandomPosition = true;
+        public bool UseCamelCaseNamingStrategy = false;
     }
 }
