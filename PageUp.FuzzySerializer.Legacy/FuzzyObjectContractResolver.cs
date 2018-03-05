@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Reflection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -9,7 +10,7 @@ namespace PageUp.FuzzySerializer.Legacy {
     public class FuzzyObjectContractResolver : DefaultContractResolver
     {
         private readonly FuzzyObjectContractResolverSettings _settings;
-        private Random _random = new Random();
+        private readonly Random _random = new Random();
 
         public FuzzyObjectContractResolver() : this(new FuzzyObjectContractResolverSettings()) {}
         public FuzzyObjectContractResolver(FuzzyObjectContractResolverSettings settings)
@@ -54,6 +55,13 @@ namespace PageUp.FuzzySerializer.Legacy {
                 _settings.ShuffleResponse ? 
                     properties.OrderBy(a => _random.Next()).ToList()
                     : properties;
+        }
+
+        protected override string ResolvePropertyName(string propertyName)
+        {
+            return _settings.UseCamelCaseNamingStrategy 
+                ? Char.ToLowerInvariant(propertyName[0]) + propertyName.Substring(1)
+                : propertyName;
         }
     }
 
