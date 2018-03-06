@@ -60,11 +60,9 @@ namespace PageUp.FuzzySerializer.Legacy {
         protected override string ResolvePropertyName(string propertyName)
         {
             return _settings.UseCamelCaseNamingStrategy 
-                ? Char.ToLowerInvariant(propertyName[0]) + propertyName.Substring(1)
+                ? StringUtils.ToCamelCase(propertyName)
                 : propertyName;
         }
     }
-
-
 }
 
