@@ -193,6 +193,29 @@ namespace PageUp.FuzzySerializer.Legacy.Tests
         }
 
         [Fact]
+        public void UseCamelCaseNamingStrategyIsOn_Serialize_AllPropertyNamesFollowCamelCaseNamingStrategy_PropertyNameStartsWithAnAcronym()
+        {
+            var jsonSerializeSettings = new JsonSerializerSettings
+            {
+                ContractResolver = new FuzzyObjectContractResolver(new FuzzyObjectContractResolverSettings { UseCamelCaseNamingStrategy = true, AddRandomPropertyToObjects = false })
+            };
+            
+            var serializableObject = 
+                new
+                {
+                    IDDescriptor = "Abhaya Chauhan"
+                };
+
+            var serialisedObject = JsonConvert.SerializeObject(
+                serializableObject, Formatting.None, jsonSerializeSettings);
+
+            var deserialisedObj = (JObject)JsonConvert.DeserializeObject(serialisedObject);
+
+            Assert.Equal(1, deserialisedObj.Count);
+            Assert.Equal("Abhaya Chauhan", deserialisedObj["idDescriptor"]);
+        }
+
+        [Fact]
         public void UseCamelCaseNamingStrategyIsOff_Serialize_AllPropertyNamesRemainUnchanged()
         {
             var jsonSerializeSettings = new JsonSerializerSettings
