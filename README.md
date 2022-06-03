@@ -23,3 +23,12 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 ## Publishing the Package
 
 The package is hosted in NuGet. Currently, the package version has to be incremented manually, and the package manually uploaded to NuGet gallery.
+
+
+## Release 2.0
+Updated packages and target frameworks to contemporary versions
+- PageUp.FuzzySerializer `NetStandard2.0`
+- PageUp.FuzzySerializer.Legacy `Net Framework 4.8`
+- PageUp.FuzzySerializer.Net `Net Framework 4.8`
+- PageUp.FuzzySerializer.NetCoreMvc `Net Core 3.1`
+
