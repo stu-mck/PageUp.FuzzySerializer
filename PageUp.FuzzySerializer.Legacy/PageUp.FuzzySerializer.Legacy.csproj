@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <Version>1.0.2</Version>
     <Company>PageUp</Company>
     <Authors>Abhaya Chauhan</Authors>
@@ -10,6 +10,6 @@
     <PackageProjectUrl>https://github.com/PageUpPeopleOrg/PageUp.FuzzySerializer</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="6.0.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 </Project>

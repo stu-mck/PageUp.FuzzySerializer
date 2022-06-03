@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>PageUp.FuzzySerializer.NetCoreMvc</PackageId>
     <Authors>Abhaya Chauhan</Authors>
     <Company>PageUp</Company>
@@ -11,6 +11,13 @@
     <AssemblyName>PageUp.FuzzySerializer.NetCoreMvc</AssemblyName>
     <RootNamespace>PageUp.FuzzySerializer.NetCoreMvc</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.25" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.25" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.25" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PageUp.FuzzySerializer\PageUp.FuzzySerializer.csproj" />
   </ItemGroup>

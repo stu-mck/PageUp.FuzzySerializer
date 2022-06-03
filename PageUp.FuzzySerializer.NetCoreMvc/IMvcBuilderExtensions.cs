@@ -5,14 +5,14 @@ namespace PageUp.FuzzySerializer.NetCoreMvc
     public static class IMvcBuilderExtensions {
 
         public static IMvcBuilder AddFuzzySerializer(this IMvcBuilder mvcBuilder) {
-            return mvcBuilder.AddJsonOptions(opt =>
+            return mvcBuilder.AddNewtonsoftJson(opt =>
                 {
                     opt.SerializerSettings.ContractResolver = new FuzzyObjectContractResolver();
                 });
         }
 
         public static IMvcBuilder AddFuzzySerializer(this IMvcBuilder mvcBuilder, FuzzyObjectContractResolverSettings fuzzySettings) {
-            return mvcBuilder.AddJsonOptions(opt =>
+            return mvcBuilder.AddNewtonsoftJson(opt =>
                 {
                     opt.SerializerSettings.ContractResolver = new FuzzyObjectContractResolver(fuzzySettings);
                 });
